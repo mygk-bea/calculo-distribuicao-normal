@@ -1,13 +1,15 @@
 body {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
+  margin: 0;
   background: #f3f3f3;
   flex-wrap: wrap;
   position: relative;
 }
 
 .container {
-  width: 550px;
+  width: 35vw;
+  padding: 20px 40px;
 }
 
 .container, .container-result {
@@ -29,12 +31,14 @@ body {
 
 #grafico {
   border-radius: 10px;
+  width: 40vw;
+  height: 300px;
 }
 
 footer {
-  height: 10vh;
   position: absolute;
   bottom: 0;
+  height: 8vh;
   background: #ffcdcd;
 
   div {
@@ -45,4 +49,8 @@ footer {
       }
     }
   }
+}
+
+.input-dupla {
+  width: 45%;
 }

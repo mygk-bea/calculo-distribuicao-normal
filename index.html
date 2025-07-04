@@ -7,8 +7,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
 </head>
-<body class="d-flex justify-content-center align-items-center">
-  <div class="container m-5 p-5 d-flex flex-column align-items-center">
+<body class="d-flex justify-content-center align-items-center gap-5 ">
+  <div class="container m-0 d-flex flex-column align-items-center">
     <h1 class="mb-4 text-center">Calculadora de Distribuição Normal</h1>
   
     <div class="mb-3 w-100">
@@ -26,43 +26,45 @@
       <div class="text-danger small" id="error-valorX"></div>
     </div>
   
-    <div id="campo-intervalo" style="display:none;">
-      <div id="campo-a" class="mb-3" style="display:none;">
+    <div id="campo-intervalo" class="d-flex justify-content-between w-100 gap-4" style="display:none;">
+      <div id="campo-a" class="mb-3 input-dupla" style="display:none;">
         <label for="valorA" class="form-label">Valor de a:</label>
         <input type="number" id="valorA" step="any" class="form-control" />
         <div class="text-danger small" id="error-valorA"></div>
       </div>
   
-      <div id="campo-b" class="mb-3" style="display:none;">
+      <div id="campo-b" class="mb-3 input-dupla" style="display:none;">
         <label for="valorB" class="form-label">Valor de b:</label>
         <input type="number" id="valorB" step="any" class="form-control" />
         <div class="text-danger small" id="error-valorB"></div>
       </div>
     </div>
-  
-    <div class="mb-3 w-100">
-      <label for="media" class="form-label">Média (μ):</label>
-      <input type="number" id="media" step="any" class="form-control" />
-      <div class="text-danger small" id="error-media"></div>
-    </div>
-  
-    <div class="mb-4 w-100">
-      <label for="desvio" class="form-label">Desvio Padrão (σ):</label>
-      <input type="number" id="desvio" step="any" class="form-control" />
-      <div class="text-danger small" id="error-desvio"></div>
+
+    <div class="mb-3 d-flex justify-content-between w-100 gap-4">
+      <div class="input-dupla">
+        <label for="media" class="form-label">Média (μ):</label>
+        <input type="number" id="media" step="any" class="form-control" />
+        <div class="text-danger small" id="error-media"></div>
+      </div>
+    
+      <div class="input-dupla">
+        <label for="desvio" class="form-label">Desvio Padrão (σ):</label>
+        <input type="number" id="desvio" step="any" class="form-control" />
+        <div class="text-danger small" id="error-desvio"></div>
+      </div>
     </div>
   
     <button class="btn btn-danger m-0 w-50" onclick="calcular()">Calcular</button>  
   </div>
 
-  <div class="container-result m-3 p-5 d-flex flex-column align-items-center">
+  <div class="container-result p-5 d-flex flex-column align-items-center">
     <h2>Resultado</h2>
     <p id="resultado" class="lead"></p>
-    <canvas id="grafico" width="750" height="430" class="border"></canvas>
+    <canvas id="grafico" class="border"></canvas>
   </div>
 
   <footer class="w-100 d-flex justify-content-center align-items-center">
-    <div class="text-center p-3">
+    <div class="text-center">
       <p>Desenvolvido por <a href="https://github.com/mygk-bea" target="_blank"
 >Beatriz Meyagusko🍓</a></p>
     </div>
