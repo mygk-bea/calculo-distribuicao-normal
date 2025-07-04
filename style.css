@@ -1,0 +1,48 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  background: #f3f3f3;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.container {
+  width: 550px;
+}
+
+.container, .container-result {
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  background: #FFF;
+}
+
+#campo-intervalo {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  #error-intervalo {
+    width: 100%;
+  }
+}
+
+#grafico {
+  border-radius: 10px;
+}
+
+footer {
+  height: 10vh;
+  position: absolute;
+  bottom: 0;
+  background: #ffcdcd;
+
+  div {
+    p {
+      margin: 0;
+      a {
+        color: #dc3545;
+      }
+    }
+  }
+}
